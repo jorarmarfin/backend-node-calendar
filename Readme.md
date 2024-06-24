@@ -14,3 +14,7 @@ npm install express
 ```bash
 npm install dotenv
 ```
+4. Install express-validator
+```bash
+npm install express-validator
+```
