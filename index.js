@@ -1,7 +1,16 @@
 const express = require('express');
+const {dbConnection} = require("./database/config");
+const cors = require('cors');
+
 require('dotenv').config();
 
 const app = express();
+
+//Base de datos
+dbConnection()
+
+//Cors
+app.use(cors());
 
 //Escuchar
 app.listen(process.env.PORT, () => {
@@ -15,9 +24,4 @@ app.use(express.static('public'));
 app.use(express.json());
 
 //Rutas
-app.use('/api/auth', require('./routes/auth'));
-// app.get('/', (req, res) => {
-//     res.json({
-//         message: 'Welcome to my API'
-//     });
-// });
+app.use('/api/auth', require('./routes/authRoute'));

@@ -18,3 +18,19 @@ npm install dotenv
 ```bash
 npm install express-validator
 ```
+5. Install mongoose
+```bash
+npm install mongoose
+```
+6. Install bcrypt
+```bash
+npm install bcrypt
+```
+7. Install jsonwebtoken
+```bash
+npm install jsonwebtoken
+```
+8. Install cors
+```bash
+npm install cors
+```
