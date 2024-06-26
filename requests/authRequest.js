@@ -6,7 +6,7 @@ const checkEmail = check('email','The email is required').isEmail();
 const checkPassword = check('password','The password is required').isLength({min:6});
 
 
-const validateFields = (req, res = response, next) => {
+const validateFieldsAuth = (req, res = response, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) return res.status(400).json({
         ok: false,
@@ -18,7 +18,7 @@ const validateFields = (req, res = response, next) => {
 }
 
 module.exports = {
-    validateFields,
+    validateFieldsAuth,
     checkName,
     checkEmail,
     checkPassword

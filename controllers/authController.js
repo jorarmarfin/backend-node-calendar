@@ -2,6 +2,7 @@ const { validationResult } = require('express-validator');
 const User = require('../models/UserModel');
 const bcrypt = require('bcryptjs');
 const { generateJWT } = require('../helpers/jwt');
+
 const userCreate = async (req, res) => {
     const { name, email, password } = req.body;
     const user = new User(req.body);
